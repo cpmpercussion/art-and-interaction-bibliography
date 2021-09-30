@@ -15,7 +15,7 @@ jobs:
           # this will also include README.md
           echo "::set-output name=files::$(printf '"%s" ' *.md)"
 
-      - uses: docker://pandoc/latex:2.9
+      - uses: docker://pandoc/core
         with:
           args: --standalone --citeproc --csl apa.csl --output=output/index.html ${{ steps.files_list.outputs.files }}
           
