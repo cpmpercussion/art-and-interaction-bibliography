@@ -17,9 +17,14 @@ jobs:
 
       - uses: docker://pandoc/latex:2.9
         with:
-          args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
+          args: --standalone --citeproc --csl apa.csl --output=output/index.html ${{ steps.files_list.outputs.files }}
           
       - uses: actions/upload-artifact@master
         with:
           name: output
           path: output
+          
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
