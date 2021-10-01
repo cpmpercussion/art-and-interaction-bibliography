@@ -1,4 +1,4 @@
-name: Build Pandoc File
+name: Build and Publis
 
 on: push
 
@@ -8,16 +8,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: create file list
-        id: files_list
+      - name: create output dir
         run: |
           mkdir output  # create output dir
-          # this will also include README.md
-          echo "::set-output name=files::$(printf '"%s" ' *.md)"
 
       - uses: docker://pandoc/core
         with:
-          args: --standalone --citeproc --csl apa.csl --output=output/index.html ${{ steps.files_list.outputs.files }}
+          args: --standalone --citeproc --csl apa.csl --output=output/index.html art-and-interaction.md
           
       - uses: actions/upload-artifact@master
         with:
