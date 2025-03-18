@@ -9,9 +9,6 @@
   <title>Art and Interaction Computing Bibliography</title>
   <style>
     html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
       color: #1a1a1a;
       background-color: #fdfdfd;
     }
@@ -30,10 +27,16 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 1em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
       }
     }
     @media print {
+      html {
+        background-color: white;
+      }
       body {
         background-color: transparent;
         color: black;
@@ -57,6 +60,10 @@
       color: #1a1a1a;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -83,9 +90,10 @@
       color: #606060;
     }
     code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
+      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -101,8 +109,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -136,21 +144,37 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
-    .hanging div.csl-entry {
+    .hanging-indent div.csl-entry {
       margin-left:2em;
       text-indent:-2em;
     }
@@ -164,11 +188,7 @@
     }
     div.csl-indent {
       margin-left: 2em;
-    }
-  </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+    }  </style>
 </head>
 <body>
 <header id="title-block-header">
@@ -176,85 +196,188 @@
 <p class="author">Charles Martin</p>
 <p class="date">2021</p>
 </header>
-<p>This is a list of suggested references for Art and Interaction Computing at the ANU.</p>
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
-<div id="ref-10.1162/ARTL_a_00176" class="csl-entry" role="doc-biblioentry">
-Boden, M. A. (2015). <span class="nocase">Creativity and ALife</span>. <em>Artificial Life</em>, <em>21</em>(3), 354–365. <a href="https://doi.org/10.1162/ARTL_a_00176">https://doi.org/10.1162/ARTL_a_00176</a>
+<p>This is a list of suggested references for Art and Interaction
+Computing at the ANU.</p>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-10.1162/ARTL_a_00176" class="csl-entry" role="listitem">
+Boden, M. A. (2015). <span class="nocase">Creativity and ALife</span>.
+<em>Artificial Life</em>, <em>21</em>(3), 354–365. <a
+href="https://doi.org/10.1162/ARTL_a_00176">https://doi.org/10.1162/ARTL_a_00176</a>
 </div>
-<div id="ref-Candy:2014rt" class="csl-entry" role="doc-biblioentry">
-Candy, L., &amp; Ferguson, S. (2014). <em>Interactive experience in the digital age: Evaluating new art practice</em> (L. Candy &amp; S. Ferguson, Eds.). Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-04510-8">https://doi.org/10.1007/978-3-319-04510-8</a>
+<div id="ref-10.7551/mitpress/10913.001.0001" class="csl-entry"
+role="listitem">
+Bown, O. (2021). <em>Beyond the creative species: Making machines that
+make art and music</em>. The MIT Press. <a
+href="https://doi.org/10.7551/mitpress/10913.001.0001">https://doi.org/10.7551/mitpress/10913.001.0001</a>
 </div>
-<div id="ref-relentlessdoppelganger" class="csl-entry" role="doc-biblioentry">
-Carr, C. J., &amp; Zukowski, Z. (2018). <em>Generating albums with SampleRNN to imitate metal, rock, and punk bands</em> (Vol. abs/1811.06633). arXiV Preprint. <a href="http://arxiv.org/abs/1811.06633">http://arxiv.org/abs/1811.06633</a>
+<div id="ref-Candy:2014rt" class="csl-entry" role="listitem">
+Candy, L., &amp; Ferguson, S. (2014). <em>Interactive experience in the
+digital age: Evaluating new art practice</em> (L. Candy &amp; S.
+Ferguson, Eds.). Springer International Publishing. <a
+href="https://doi.org/10.1007/978-3-319-04510-8">https://doi.org/10.1007/978-3-319-04510-8</a>
 </div>
-<div id="ref-Edmonds:2010to" class="csl-entry" role="doc-biblioentry">
-Edmonds, E. (2010). The art of interaction. <em>Digital Creativity</em>, <em>21</em>(4), 257–264. <a href="https://doi.org/10.1080/14626268.2010.556347">https://doi.org/10.1080/14626268.2010.556347</a>
+<div id="ref-relentlessdoppelganger" class="csl-entry" role="listitem">
+Carr, C. J., &amp; Zukowski, Z. (2018). <em>Generating albums with
+SampleRNN to imitate metal, rock, and punk bands</em> (Vol.
+abs/1811.06633). arXiV Preprint. <a
+href="http://arxiv.org/abs/1811.06633">http://arxiv.org/abs/1811.06633</a>
 </div>
-<div id="ref-Edmonds:2018tr" class="csl-entry" role="doc-biblioentry">
-Edmonds, E. (2018). <em>The art of interaction: What HCI can learn from interactive art</em>. Morgan &amp; Claypool Publishers. <a href="https://doi.org/10.2200/S00825ED1V01Y201802HCI039">https://doi.org/10.2200/S00825ED1V01Y201802HCI039</a>
+<div id="ref-Edmonds:2010to" class="csl-entry" role="listitem">
+Edmonds, E. (2010). The art of interaction. <em>Digital Creativity</em>,
+<em>21</em>(4), 257–264. <a
+href="https://doi.org/10.1080/14626268.2010.556347">https://doi.org/10.1080/14626268.2010.556347</a>
 </div>
-<div id="ref-10.1162/isal_a_00059" class="csl-entry" role="doc-biblioentry">
-Eldridge, A., &amp; Kiefer, C. (2018). <em><span class="nocase">Toward a Synthetic Acoustic Ecology: Sonically Situated, Evolutionary Agent Based Models of the Acoustic Niche Hypothesis</span>: Vols. ALIFE 2018: The 2018 Conference on Artificial Life</em> (pp. 296–303). <a href="https://doi.org/10.1162/isal_a_00059">https://doi.org/10.1162/isal_a_00059</a>
+<div id="ref-Edmonds:2018tr" class="csl-entry" role="listitem">
+Edmonds, E. (2018). <em>The art of interaction: What HCI can learn from
+interactive art</em>. Morgan &amp; Claypool Publishers. <a
+href="https://doi.org/10.2200/S00825ED1V01Y201802HCI039">https://doi.org/10.2200/S00825ED1V01Y201802HCI039</a>
 </div>
-<div id="ref-iamascope" class="csl-entry" role="doc-biblioentry">
-Fels, S., &amp; Mase, K. (1999). Iamascope: A graphical musical instrument. <em>Computers &amp; Graphics</em>, <em>23</em>(2), 277–286. https://doi.org/<a href="https://doi.org/10.1016/S0097-8493(99)00037-0">https://doi.org/10.1016/S0097-8493(99)00037-0</a>
+<div id="ref-10.1162/isal_a_00059" class="csl-entry" role="listitem">
+Eldridge, A., &amp; Kiefer, C. (2018). <em><span class="nocase">Toward a
+Synthetic Acoustic Ecology: Sonically Situated, Evolutionary Agent Based
+Models of the Acoustic Niche Hypothesis</span>: Vols. ALIFE 2018: The
+2018 Conference on Artificial Life</em> (pp. 296–303). <a
+href="https://doi.org/10.1162/isal_a_00059">https://doi.org/10.1162/isal_a_00059</a>
 </div>
-<div id="ref-technology-affordances" class="csl-entry" role="doc-biblioentry">
-Gaver, W. W. (1991). Technology affordances. <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em>, 79–84. <a href="https://doi.org/10.1145/108844.108856">https://doi.org/10.1145/108844.108856</a>
+<div id="ref-iamascope" class="csl-entry" role="listitem">
+Fels, S., &amp; Mase, K. (1999). Iamascope: A graphical musical
+instrument. <em>Computers &amp; Graphics</em>, <em>23</em>(2), 277–286.
+https://doi.org/<a
+href="https://doi.org/10.1016/S0097-8493(99)00037-0">https://doi.org/10.1016/S0097-8493(99)00037-0</a>
 </div>
-<div id="ref-sverm-resonans-guitars" class="csl-entry" role="doc-biblioentry">
-Gonzalez Sanchez, V. E., Zelechowska, A., Martin, C. P., Johnson, V., Bjerkestrand, K. A. V., &amp; Jensenius, A. R. (2018, June). Bela-based augmented acoustic guitars for inverse sonic microinteraction. <em>Proceedings of the International Conference on New Interfaces for Musical Expression</em>. <a href="https://doi.org/10.5281/zenodo.1302599">https://doi.org/10.5281/zenodo.1302599</a>
+<div id="ref-technology-affordances" class="csl-entry" role="listitem">
+Gaver, W. W. (1991). Technology affordances. <em>Proceedings of the
+SIGCHI Conference on Human Factors in Computing Systems</em>, 79–84. <a
+href="https://doi.org/10.1145/108844.108856">https://doi.org/10.1145/108844.108856</a>
 </div>
-<div id="ref-10.1162/ARTL_a_00170" class="csl-entry" role="doc-biblioentry">
-Greenfield, G., &amp; Machado, P. (2015). <span class="nocase">Ant- and Ant-Colony-Inspired ALife Visual Art</span>. <em>Artificial Life</em>, <em>21</em>(3), 293–306. <a href="https://doi.org/10.1162/ARTL_a_00170">https://doi.org/10.1162/ARTL_a_00170</a>
+<div id="ref-sverm-resonans-guitars" class="csl-entry" role="listitem">
+Gonzalez Sanchez, V. E., Zelechowska, A., Martin, C. P., Johnson, V.,
+Bjerkestrand, K. A. V., &amp; Jensenius, A. R. (2018, June). Bela-based
+augmented acoustic guitars for inverse sonic microinteraction.
+<em>Proceedings of the International Conference on New Interfaces for
+Musical Expression</em>. <a
+href="https://doi.org/10.5281/zenodo.1302599">https://doi.org/10.5281/zenodo.1302599</a>
 </div>
-<div id="ref-Jeon:2019wt" class="csl-entry" role="doc-biblioentry">
-Jeon, M., Fiebrink, R., Edmonds, E. A., &amp; Herath, D. (2019). From rituals to magic: Interactive art and HCI of the past, present, and future. <em>International Journal of Human-Computer Studies</em>, <em>131</em>, 108–119. https://doi.org/<a href="https://doi.org/10.1016/j.ijhcs.2019.06.005">https://doi.org/10.1016/j.ijhcs.2019.06.005</a>
+<div id="ref-10.1162/ARTL_a_00170" class="csl-entry" role="listitem">
+Greenfield, G., &amp; Machado, P. (2015). <span class="nocase">Ant- and
+Ant-Colony-Inspired ALife Visual Art</span>. <em>Artificial Life</em>,
+<em>21</em>(3), 293–306. <a
+href="https://doi.org/10.1162/ARTL_a_00170">https://doi.org/10.1162/ARTL_a_00170</a>
 </div>
-<div id="ref-cybernetics-in-art" class="csl-entry" role="doc-biblioentry">
-Jones, S. (2013-01-012013-01-01). Cybernetics in society and art. <em>Proceedings of the 19th International Symposium of Electronic Art</em>. <a href="http://hdl.handle.net/2123/9863">http://hdl.handle.net/2123/9863</a>
+<div id="ref-Jeon:2019wt" class="csl-entry" role="listitem">
+Jeon, M., Fiebrink, R., Edmonds, E. A., &amp; Herath, D. (2019). From
+rituals to magic: Interactive art and HCI of the past, present, and
+future. <em>International Journal of Human-Computer Studies</em>,
+<em>131</em>, 108–119. https://doi.org/<a
+href="https://doi.org/10.1016/j.ijhcs.2019.06.005">https://doi.org/10.1016/j.ijhcs.2019.06.005</a>
 </div>
-<div id="ref-sound-art" class="csl-entry" role="doc-biblioentry">
-Licht, A. (2009). Sound art: Origins, development and ambiguities. <em>Organised Sound</em>, <em>14</em>(1), 3–10. <a href="https://doi.org/10.1017/S1355771809000028">https://doi.org/10.1017/S1355771809000028</a>
+<div id="ref-cybernetics-in-art" class="csl-entry" role="listitem">
+Jones, S. (2013-01-012013-01-01). Cybernetics in society and art.
+<em>Proceedings of the 19th International Symposium of Electronic
+Art</em>. <a
+href="http://hdl.handle.net/2123/9863">http://hdl.handle.net/2123/9863</a>
 </div>
-<div id="ref-designing-constraints-music" class="csl-entry" role="doc-biblioentry">
-Magnusson, T. (2010). <span class="nocase">Designing Constraints: Composing and Performing with Digital Musical Systems</span>. <em>Computer Music Journal</em>, <em>34</em>(4), 62–73. <a href="https://doi.org/10.1162/COMJ_a_00026">https://doi.org/10.1162/COMJ_a_00026</a>
+<div id="ref-sound-art" class="csl-entry" role="listitem">
+Licht, A. (2009). Sound art: Origins, development and ambiguities.
+<em>Organised Sound</em>, <em>14</em>(1), 3–10. <a
+href="https://doi.org/10.1017/S1355771809000028">https://doi.org/10.1017/S1355771809000028</a>
 </div>
-<div id="ref-empi" class="csl-entry" role="doc-biblioentry">
-Martin, C. P., Glette, K., Nygaard, T. F., &amp; Torresen, J. (2020). Understanding musical predictions with an embodied interface for musical machine learning. <em>Frontiers in Artificial Intelligence</em>, <em>3</em>, 6. <a href="https://doi.org/10.3389/frai.2020.00006">https://doi.org/10.3389/frai.2020.00006</a>
+<div id="ref-designing-constraints-music" class="csl-entry"
+role="listitem">
+Magnusson, T. (2010). <span class="nocase">Designing Constraints:
+Composing and Performing with Digital Musical Systems</span>.
+<em>Computer Music Journal</em>, <em>34</em>(4), 62–73. <a
+href="https://doi.org/10.1162/COMJ_a_00026">https://doi.org/10.1162/COMJ_a_00026</a>
 </div>
-<div id="ref-stillness-under-tension" class="csl-entry" role="doc-biblioentry">
-Martin, C. P., Jensenius, A. R., &amp; Torresen, J. (2018). Composing an ensemble standstill work for myo and bela. <em>Proceedings of the International Conference on New Interfaces for Musical Expression</em>, 196–197. <a href="https://doi.org/10.5281/zenodo.1302543">https://doi.org/10.5281/zenodo.1302543</a>
+<div id="ref-empi" class="csl-entry" role="listitem">
+Martin, C. P., Glette, K., Nygaard, T. F., &amp; Torresen, J. (2020).
+Understanding musical predictions with an embodied interface for musical
+machine learning. <em>Frontiers in Artificial Intelligence</em>,
+<em>3</em>, 6. <a
+href="https://doi.org/10.3389/frai.2020.00006">https://doi.org/10.3389/frai.2020.00006</a>
 </div>
-<div id="ref-sonic-sculpture" class="csl-entry" role="doc-biblioentry">
-Martin, C. P., Liu, Z., Wang, Y., He, W., &amp; Gardner, H. (2020). Sonic sculpture: Activating engagement with head-mounted augmented reality. In R. Michon &amp; F. Schroeder (Eds.), <em>Proceedings of the international conference on new interfaces for musical expression</em> (pp. 39–42). Birmingham City University. <a href="https://www.nime.org/proceedings/2020/nime2020_paper8.pdf">https://www.nime.org/proceedings/2020/nime2020_paper8.pdf</a>
+<div id="ref-stillness-under-tension" class="csl-entry" role="listitem">
+Martin, C. P., Jensenius, A. R., &amp; Torresen, J. (2018). Composing an
+ensemble standstill work for myo and bela. <em>Proceedings of the
+International Conference on New Interfaces for Musical Expression</em>,
+196–197. <a
+href="https://doi.org/10.5281/zenodo.1302543">https://doi.org/10.5281/zenodo.1302543</a>
 </div>
-<div id="ref-microjam" class="csl-entry" role="doc-biblioentry">
-Martin, C. P., &amp; Torresen, J. (2020). Data driven analysis of tiny touchscreen performance with MicroJam. <em>Computer Music Journal</em>, <em>43</em>(4), 41–57. <a href="https://doi.org/10.1162/COMJ_a_00536">https://doi.org/10.1162/COMJ_a_00536</a>
+<div id="ref-sonic-sculpture" class="csl-entry" role="listitem">
+Martin, C. P., Liu, Z., Wang, Y., He, W., &amp; Gardner, H. (2020).
+Sonic sculpture: Activating engagement with head-mounted augmented
+reality. In R. Michon &amp; F. Schroeder (Eds.), <em>Proceedings of the
+international conference on new interfaces for musical expression</em>
+(pp. 39–42). Birmingham City University. <a
+href="https://www.nime.org/proceedings/2020/nime2020_paper8.pdf">https://www.nime.org/proceedings/2020/nime2020_paper8.pdf</a>
 </div>
-<div id="ref-strike-on-stage" class="csl-entry" role="doc-biblioentry">
-Martin, C., &amp; Lai, C.-H. (2011). <span class="nocase">Strike on Stage</span>: A percussion and media performance. In A. R. Jensenius, A. Tveit, R. I. Godoy, &amp; D. Overholt (Eds.), <em>Proceedings of the international conference on new interfaces for musical expression</em> (pp. 142–143). <a href="https://doi.org/10.5281/zenodo.1178103">https://doi.org/10.5281/zenodo.1178103</a>
+<div id="ref-microjam" class="csl-entry" role="listitem">
+Martin, C. P., &amp; Torresen, J. (2020). Data driven analysis of tiny
+touchscreen performance with MicroJam. <em>Computer Music Journal</em>,
+<em>43</em>(4), 41–57. <a
+href="https://doi.org/10.1162/COMJ_a_00536">https://doi.org/10.1162/COMJ_a_00536</a>
 </div>
-<div id="ref-doet" class="csl-entry" role="doc-biblioentry">
-Norman, D. (2013). <em>The design of everyday things: Revised and expanded edition</em>. Basic books.
+<div id="ref-strike-on-stage" class="csl-entry" role="listitem">
+Martin, C., &amp; Lai, C.-H. (2011). <span class="nocase">Strike on
+Stage</span>: A percussion and media performance. In A. R. Jensenius, A.
+Tveit, R. I. Godoy, &amp; D. Overholt (Eds.), <em>Proceedings of the
+international conference on new interfaces for musical expression</em>
+(pp. 142–143). <a
+href="https://doi.org/10.5281/zenodo.1178103">https://doi.org/10.5281/zenodo.1178103</a>
 </div>
-<div id="ref-rnn-laptop-ensemble" class="csl-entry" role="doc-biblioentry">
-Proctor, R., &amp; Martin, C. P. (2020). A laptop ensemble performance system using recurrent neural networks. In R. Michon &amp; F. Schroeder (Eds.), <em>Proceedings of the international conference on new interfaces for musical expression</em> (pp. 43–48). Birmingham City University. <a href="https://www.nime.org/proceedings/2020/nime2020_paper9.pdf">https://www.nime.org/proceedings/2020/nime2020_paper9.pdf</a>
+<div id="ref-doet" class="csl-entry" role="listitem">
+Norman, D. (2013). <em>The design of everyday things: Revised and
+expanded edition</em>. Basic books.
 </div>
-<div id="ref-Shneiderman:2007qv" class="csl-entry" role="doc-biblioentry">
-Shneiderman, B. (2007). Creativity support tools: Accelerating discovery and innovation. <em>Communications of the ACM</em>, <em>50</em>(12), 20–32. <a href="https://doi.org/10.1145/1323688.1323689">https://doi.org/10.1145/1323688.1323689</a>
+<div id="ref-rnn-laptop-ensemble" class="csl-entry" role="listitem">
+Proctor, R., &amp; Martin, C. P. (2020). A laptop ensemble performance
+system using recurrent neural networks. In R. Michon &amp; F. Schroeder
+(Eds.), <em>Proceedings of the international conference on new
+interfaces for musical expression</em> (pp. 43–48). Birmingham City
+University. <a
+href="https://www.nime.org/proceedings/2020/nime2020_paper9.pdf">https://www.nime.org/proceedings/2020/nime2020_paper9.pdf</a>
 </div>
-<div id="ref-Shneiderman:2006vg" class="csl-entry" role="doc-biblioentry">
-Shneiderman, B., Fischer, G., Czerwinski, M., Resnick, M., Myers, B., Candy, L., Edmonds, E., Eisenberg, M., Giaccardi, E., Hewett, T., Jennings, P., Kules, B., Nakakoji, K., Nunamaker, J., Pausch, R., Selker, T., Sylvan, E., &amp; Terry, M. (2006). Creativity support tools: Report from a u.s. National science foundation sponsored workshop. <em>International Journal of Human-Computer Interaction</em>, <em>20</em>(2), 61–77. <a href="https://doi.org/10.1207/s15327590ijhc2002_1">https://doi.org/10.1207/s15327590ijhc2002_1</a>
+<div id="ref-10.1145/3583082" class="csl-entry" role="listitem">
+Shein, E. (2023). … and the computer plays along. <em>Communications of
+the ACM</em>, <em>66</em>(4), 15–17. <a
+href="https://doi.org/10.1145/3583082">https://doi.org/10.1145/3583082</a>
 </div>
-<div id="ref-floating-head-experiment" class="csl-entry" role="doc-biblioentry">
-St-Onge, D., Reeves, N., Kroos, C., Hanafi, M., Herath, D., &amp; Stelarc. (2011). The floating head experiment. <em>Proceedings of the 6th International Conference on Human-Robot Interaction</em>, 395–396. <a href="https://doi.org/10.1145/1957656.1957799">https://doi.org/10.1145/1957656.1957799</a>
+<div id="ref-Shneiderman:2007qv" class="csl-entry" role="listitem">
+Shneiderman, B. (2007). Creativity support tools: Accelerating discovery
+and innovation. <em>Communications of the ACM</em>, <em>50</em>(12),
+20–32. <a
+href="https://doi.org/10.1145/1323688.1323689">https://doi.org/10.1145/1323688.1323689</a>
 </div>
-<div id="ref-10.1145/3450741.3465245" class="csl-entry" role="doc-biblioentry">
-Wallace, B., Martin, C. P., Tørresen, J., &amp; Nymoen, K. (2021). Learning embodied sound-motion mappings: Evaluating AI-generated dance improvisation. <em>Creativity and Cognition</em>. <a href="https://doi.org/10.1145/3450741.3465245">https://doi.org/10.1145/3450741.3465245</a>
+<div id="ref-Shneiderman:2006vg" class="csl-entry" role="listitem">
+Shneiderman, B., Fischer, G., Czerwinski, M., Resnick, M., Myers, B.,
+Candy, L., Edmonds, E., Eisenberg, M., Giaccardi, E., Hewett, T.,
+Jennings, P., Kules, B., Nakakoji, K., Nunamaker, J., Pausch, R.,
+Selker, T., Sylvan, E., &amp; Terry, M. (2006). Creativity support
+tools: Report from a u.s. National science foundation sponsored
+workshop. <em>International Journal of Human-Computer Interaction</em>,
+<em>20</em>(2), 61–77. <a
+href="https://doi.org/10.1207/s15327590ijhc2002_1">https://doi.org/10.1207/s15327590ijhc2002_1</a>
 </div>
-<div id="ref-mountrothko" class="csl-entry" role="doc-biblioentry">
-Zhang, Y., &amp; Funk, M. (2021). Inspiration. In <em>Coding art: The four steps to creative programming with the processing language</em> (pp. 195–200). Apress. <a href="https://doi.org/10.1007/978-1-4842-6264-1_6">https://doi.org/10.1007/978-1-4842-6264-1_6</a>
+<div id="ref-floating-head-experiment" class="csl-entry"
+role="listitem">
+St-Onge, D., Reeves, N., Kroos, C., Hanafi, M., Herath, D., &amp;
+Stelarc. (2011). The floating head experiment. <em>Proceedings of the
+6th International Conference on Human-Robot Interaction</em>, 395–396.
+<a
+href="https://doi.org/10.1145/1957656.1957799">https://doi.org/10.1145/1957656.1957799</a>
+</div>
+<div id="ref-10.1145/3450741.3465245" class="csl-entry" role="listitem">
+Wallace, B., Martin, C. P., Tørresen, J., &amp; Nymoen, K. (2021).
+Learning embodied sound-motion mappings: Evaluating AI-generated dance
+improvisation. <em>Creativity and Cognition</em>. <a
+href="https://doi.org/10.1145/3450741.3465245">https://doi.org/10.1145/3450741.3465245</a>
+</div>
+<div id="ref-mountrothko" class="csl-entry" role="listitem">
+Zhang, Y., &amp; Funk, M. (2021). Inspiration. In <em>Coding art: The
+four steps to creative programming with the processing language</em>
+(pp. 195–200). Apress. <a
+href="https://doi.org/10.1007/978-1-4842-6264-1_6">https://doi.org/10.1007/978-1-4842-6264-1_6</a>
 </div>
 </div>
 </body>
